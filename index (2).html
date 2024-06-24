@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Bidirectional Charging and V2G</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #3498db;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            max-width: 100px;
+            max-height: 50px;
+        }
+        nav {
+            background-color: #2c3e50;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        section {
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            transition: all 0.3s ease-in-out;
+        }
+        section img {
+            max-width: 300px;
+            margin-left: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #34495e;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            border: 3px solid #000;
+        }
+        .highlight:target {
+            scroll-margin-top: 50px;
+        }
+        .left-img {
+            flex-direction: row-reverse;
+        }
+        .bottom-img {
+            flex-direction: column;
+        }
+        .bottom-img img {
+            margin-left: 0;
+            margin-top: 15px;
+            width: 100%;
+            max-width: none;
+        }
+        @media (max-width: 768px) {
+            section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            section img {
+                margin-left: 0;
+                margin-top: 15px;
+                width: 100%;
+                max-width: none;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav a");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", function() {
+                    sections.forEach(section => section.classList.remove("highlight"));
+                    const targetSection = document.querySelector(link.getAttribute("href"));
+                    targetSection.classList.add("highlight");
+                    targetSection.scrollIntoView({ behavior: "smooth", block: "center" });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Understanding Bidirectional Charging and V2G</h1>
+        <img src="images/S.png" alt="Company Logo">
+    </header>
+
+    <nav>
+        <a href="#bidirectional-charging">Bidirectional Charging</a>
+        <a href="#v2g">Vehicle-to-Grid (V2G)</a>
+        <a href="#benefits">Benefits of V2G</a>
+    </nav>
+
+    <section id="bidirectional-charging">
+        <div>
+            <h2>Bidirectional Charging</h2>
+            <ul>
+                <li>Allows electric vehicles (EVs) to not only draw power from the grid to charge their batteries but also to send power back to the grid.</li>
+                <li>Enabled by advanced power electronics that can invert the direct current (DC) from the car's battery into alternating current (AC) compatible with the grid.</li>
+                <li>Functions as a mobile energy storage device, providing flexibility and resilience to the power grid.</li>
+                <li>Useful during peak demand times or in emergency situations where additional power is needed quickly.</li>
+            </ul>
+        </div>
+        <img src="images/bidirectional.jpeg" alt="Bidirectional Charging">
+    </section>
+
+    <section id="v2g" class="left-img">
+        <img src="images/v2g.jpg" alt="Vehicle-to-Grid (V2G)">
+        <div>
+            <h2>Vehicle-to-Grid (V2G)</h2>
+            <ul>
+                <li>System where plug-in electric vehicles communicate with the power grid to sell demand response services by returning electricity to the grid or throttling their charging rate.</li>
+                <li>Helps to stabilize the grid, especially during peak demand times or when there are disruptions in power supply.</li>
+                <li>Leverages the batteries in electric vehicles to act as a distributed energy resource, enhancing the overall efficiency and reliability of the grid.</li>
+                <li>Allows for better integration of renewable energy sources, such as solar and wind power, by storing excess energy and releasing it when needed.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="benefits" class="bottom-img">
+        <div>
+            <h2>Benefits of V2G</h2>
+            <p>V2G technology offers several benefits, including:</p>
+            <ul>
+                <li><strong>Grid Stability:</strong> Helps balance supply and demand, reducing the need for additional power plants.</li>
+                <li><strong>Renewable Integration:</strong> Supports the integration of renewable energy sources like wind and solar by storing excess energy.</li>
+                <li><strong>Cost Savings:</strong> Potentially lower energy costs for EV owners who can sell electricity back to the grid.</li>
+                <li><strong>Environmental Impact:</strong> Reduces reliance on fossil fuels by optimizing the use of renewable energy.</li>
+            </ul>
+        </div>
+        <img src="images/benfits.jpg" alt="Benefits of V2G">
+    </section>
+</body>
+</html>
+
