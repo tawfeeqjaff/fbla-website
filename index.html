@@ -17,10 +17,9 @@
             color: #ecf0f1;
             padding: 20px;
             text-align: center;
-            position: relative;
         }
         header h1 {
-            color: #3498db;
+            color: #0d629b;
             font-size: 2.5em;
             font-weight: 700;
         }
@@ -57,7 +56,6 @@
             max-width: 300px;
             margin-left: 20px;
             border-radius: 8px;
-            max-width: 100%;
         }
         h2 {
             color: #34495e;
@@ -77,6 +75,9 @@
         }
         .highlight:target {
             scroll-margin-top: 50px;
+        }
+        .left-img {
+            flex-direction: row-reverse;
         }
         .bottom-img {
             flex-direction: column;
@@ -141,17 +142,17 @@
         <img src="images/bidirectional.jpeg" alt="Bidirectional Charging">
     </section>
 
-    <section id="v2g" class="bottom-img">
+    <section id="v2g" class="left-img">
+        <img src="images/v2g.jpg" alt="Vehicle-to-Grid (V2G)">
         <div>
             <h2>Vehicle-to-Grid (V2G)</h2>
             <ul>
-                <li>System where plug-in electric vehicles communicate with the power grid to sell demand response services. It does this by returning electricity to the grid or throttling their charging rate.</li>
+                <li>System where plug-in electric vehicles communicate with the power grid to sell demand response services by returning electricity to the grid or throttling their charging rate.</li>
                 <li>Helps to stabilize the grid, especially during peak demand times or when there are disruptions in power supply.</li>
                 <li>Leverages the batteries in electric vehicles to act as a distributed energy resource, enhancing the overall efficiency and reliability of the grid.</li>
                 <li>Allows for better integration of renewable energy sources, such as solar and wind power, by storing excess energy and releasing it when needed.</li>
             </ul>
         </div>
-        <img src="images/v2g.jpg" alt="Vehicle-to-Grid (V2G)">
     </section>
 
     <section id="benefits" class="bottom-img">
@@ -161,7 +162,7 @@
             <ul>
                 <li><strong>Grid Stability:</strong> Helps balance supply and demand, reducing the need for additional power plants.</li>
                 <li><strong>Renewable Integration:</strong> Supports the integration of renewable energy sources like wind and solar by storing excess energy.</li>
-                <li><strong>Cost Savings:</strong> Lowers energy costs for EV owners who can supply electricity back to the grid.</li>
+                <li><strong>Cost Savings:</strong> Potentially lower energy costs for EV owners who can sell electricity back to the grid.</li>
                 <li><strong>Environmental Impact:</strong> Reduces reliance on fossil fuels by optimizing the use of renewable energy.</li>
             </ul>
         </div>
@@ -169,3 +170,4 @@
     </section>
 </body>
 </html>
+
