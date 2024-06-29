@@ -17,6 +17,7 @@
             color: #ecf0f1;
             padding: 20px;
             text-align: center;
+            position: relative;
         }
         header h1 {
             color: #ffffff;
@@ -56,6 +57,7 @@
             max-width: 300px;
             margin-left: 20px;
             border-radius: 8px;
+            max-width: 100%;
         }
         h2 {
             color: #34495e;
@@ -75,9 +77,6 @@
         }
         .highlight:target {
             scroll-margin-top: 50px;
-        }
-        .left-img {
-            flex-direction: row-reverse;
         }
         .bottom-img {
             flex-direction: column;
@@ -142,8 +141,7 @@
         <img src="images/bidirectional.jpeg" alt="Bidirectional Charging">
     </section>
 
-    <section id="v2g" class="left-img">
-        <img src="images/v2g.jpg" alt="Vehicle-to-Grid (V2G)">
+    <section id="v2g" class="bottom-img">
         <div>
             <h2>Vehicle-to-Grid (V2G)</h2>
             <ul>
@@ -153,6 +151,7 @@
                 <li>Allows for better integration of renewable energy sources, such as solar and wind power, by storing excess energy and releasing it when needed.</li>
             </ul>
         </div>
+        <img src="images/v2g.jpg" alt="Vehicle-to-Grid (V2G)">
     </section>
 
     <section id="benefits" class="bottom-img">
@@ -170,4 +169,3 @@
     </section>
 </body>
 </html>
-
